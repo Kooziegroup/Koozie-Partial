@@ -1,0 +1,19 @@
+<apex:component >
+  <!-- Begin Default Content REMOVE THIS -->
+  
+  <script type="text/javascript">
+  (function() {
+     var blinks = document.getElementsByTagName('blink');
+     var visibility = 'hidden';
+     window.setInterval(function() {
+       for (var i = blinks.length - 1; i >= 0; i--) {
+         blinks[i].style.visibility = visibility;
+       }
+       visibility = (visibility === 'visible') ? 'hidden' : 'visible';
+   }, 250);
+  })();
+</script>
+<blink>Text to blink here</blink>
+  This is your new Component
+  <!-- End Default Content REMOVE THIS -->
+</apex:component>

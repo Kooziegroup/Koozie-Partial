@@ -1,0 +1,23 @@
+<apex:page >
+ 
+   <style>
+     
+      .blink-two {
+        animation: blinker 0.6s linear infinite;
+        color: Red;
+        font-size: 20px;
+        font-family: sans-pro;
+      }
+      .blink-two {
+        animation: blinker-two 3.0s linear infinite;
+      }
+      @keyframes blinker-two {
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+
+ <p class="blink blink-two">This is a <b>CLOSED</b> case. Please do not create escalation on it. Thank you!<br/>
+  </p>
+</apex:page>

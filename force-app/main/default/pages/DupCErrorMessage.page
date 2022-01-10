@@ -1,0 +1,11 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+<font color="red">
+       
+    
+ 
+  <h1>We have found duplicate for this record</h1>
+  </font>
+ 
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

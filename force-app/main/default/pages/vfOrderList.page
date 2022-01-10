@@ -1,0 +1,130 @@
+<apex:page controller="displayOrder" sidebar="false" showheader="false" lightningStylesheets="true">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: white;
+  padding: 30px;
+  text-align: left;
+  font-size: 35px;
+  color: black;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  font-size: 20px;  
+  width: 10%;
+  height: 100%;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  font-size: 17px;
+  padding: 20px;
+  width: 90%;
+  background-color: #f1f1f1;
+
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+
+<header>
+    <img src = "https://cdna.4imprint.com/qtz/images/4imprint.svg"/>
+  <h2>Self-Service</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="/apex/vfHome">Home</a></li>
+      <li><a href="/apex/vfCaseList">Cases</a></li>
+      <li><a href="#">Orders</a></li>
+    </ul>
+  </nav>
+
+  <article>
+ <apex:form id="frm">
+ 
+ <apex:selectList size="1" value="{!getOrdertype}" >
+ <apex:selectOptions value="{!orderstatus}"> </apex:selectOptions>
+ <apex:actionSupport event="onchange" action="{!displayorderlist}"/>
+ </apex:selectList>
+ <apex:outputLabel id="pnl1" >
+ <apex:pageBlock >
+ <apex:pageBlockTable value="{!orderlst}" var="ord">
+<apex:column headerValue="Order Number">  
+    <apex:outputLink value="/apex/vfOrderDetails?id={!ord.ID}">
+     <apex:outputText value="{!ord.EBS_Order_Number__c}">
+        </apex:outputText>
+    </apex:outputLink>
+</apex:column>
+ <apex:column value="{!ord.Customer_PO__c}">
+    <apex:facet name="header">PO Number</apex:facet>
+ </apex:column> 
+ <apex:column value="{!ord.Tracking_Link__c}">
+    <apex:facet name="header">Tracking Link</apex:facet>
+ </apex:column>
+ <apex:column value="{!ord.Order_Header_Charges__c}">
+    <apex:facet name="header">Order Header Charges</apex:facet>
+ </apex:column>
+ <apex:column value="{!ord.Order_Header_Total__c}">
+    <apex:facet name="header">Order Header Total</apex:facet>
+ </apex:column>
+ <apex:column value="{!ord.Effective_Date__c}">
+    <apex:facet name="header">Effective Date</apex:facet>
+ </apex:column>
+ <apex:column value="{!ord.Order_Header_Status__c}">
+    <apex:facet name="header">Status</apex:facet>
+ </apex:column>
+ </apex:pageBlockTable>
+ 
+ </apex:pageBlock>
+ 
+ </apex:outputLabel>
+ </apex:form>
+  </article>
+</section>
+
+<footer>
+    <p>KoozieGroup Service</p>
+</footer> 
+</apex:page>

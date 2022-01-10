@@ -1,0 +1,57 @@
+<apex:component controller="findVFs" access="global">
+  <head>
+      <style>
+      .odd { 
+        background-color: #FCF7F7;
+      }
+    .even {
+        background-color: #E3DCDB;
+    }
+   </style>
+   
+    <style type="text/css">
+        .col1 {width:100px; text-align:center;}
+        .col2 {width:150px; text-align:center;}
+        .col3 {width:200px; text-align:center;}       
+        .col4 {width:200px; text-align:center;} 
+        .col5 {width:200px; text-align:center;} 
+        .col6 {width:200px; text-align:center;}         
+    </style>   
+  </head>    
+    <apex:attribute id="caseIdR" assignTo="{!formID}" name="rCaseID" type="Request_Form__c" description="The case's SF ID"/>
+    
+    <apex:dataTable value="{!VF}" var="vfRecs" id="table"  rowClasses="odd,even" style="table-layout:fixed" columns="6" columnsWidth="50px, 100px, 100px, 100px, 100px, 100px" border="1px" > 
+
+        <apex:column style="white-space:normal;">
+            <apex:facet name="header">Previous Virtual Proof URL</apex:facet>
+            <apex:outputText value="{!vfRecs.Previous_Virtual_Proof_URL__c}"/>
+        </apex:column>
+        
+        <apex:column >
+            <apex:facet name="header">Item #</apex:facet>
+            <apex:outputText value="{!vfRecs.Item_Number__c}"/>
+        </apex:column>        
+
+        <apex:column >
+            <apex:facet name="header">Item Color</apex:facet>
+            <apex:outputText value="{!vfRecs.Item_Color__c}"/>
+        </apex:column>  
+        
+        <apex:column >
+            <apex:facet name="header">Imprint Color</apex:facet>
+            <apex:outputText value="{!vfRecs.Imprint_Color__c}"/>
+        </apex:column> 
+        
+        <apex:column >
+            <apex:facet name="header">Art Instructions</apex:facet>
+            <apex:outputText value="{!vfRecs.Art_Instructions__c}"/>
+        </apex:column> 
+        
+        <apex:column >
+            <apex:facet name="header">Any Additional Instructions</apex:facet>
+            <apex:outputText value="{!vfRecs.Any_Additional_Instructions__c}"/>
+        </apex:column>                 
+        
+    </apex:dataTable>
+    
+</apex:component>

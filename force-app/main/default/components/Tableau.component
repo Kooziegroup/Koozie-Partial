@@ -1,0 +1,6 @@
+<apex:component >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations you are viewing a Tableau Report</h1>
+  This is your new Component
+  <!-- End Default Content REMOVE THIS -->
+</apex:component>

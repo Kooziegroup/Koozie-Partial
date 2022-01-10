@@ -1,0 +1,21 @@
+<apex:page >
+
+  <!-- Begin Default Content REMOVE THIS -->
+  
+  <script type="text/javascript">
+  (function() {
+     var blinks = document.getElementsByTagName('blink');
+     var visibility = 'hidden';
+     
+     window.setInterval(function() {
+       for (var i = blinks.length - 2; i >= 0; i--) {
+         blinks[i].style.visibility = visibility;
+       }
+       visibility = (visibility === 'visible') ? 'hidden' : 'visible';
+   }, 300);
+ 
+  })();
+</script>
+
+<blink><h1 style="color:Tomato;"><B>Attention Sales/Service Reps!.This Contact is incomplete. Please fill out any available details including the correct account. Thank you!  </B></h1></blink>
+  </apex:page>

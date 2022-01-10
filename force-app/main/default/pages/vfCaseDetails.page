@@ -1,0 +1,92 @@
+<apex:page standardController="Case"  sidebar="false" showheader="false" lightningStylesheets="true">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: white;
+  padding: 30px;
+  text-align: left;
+  font-size: 35px;
+  color: black;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  font-size: 20px;  
+  width: 10%;
+  height: 100%;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  font-size: 17px;
+  padding: 20px;
+  width: 90%;
+  background-color: #f1f1f1;
+
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+
+<header>
+    <img src = "https://cdna.4imprint.com/qtz/images/4imprint.svg"/>
+  <h2>Self-Service</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="/apex/vfHome">Home</a></li>
+      <li><a href="/apex/vfCaseList">Cases</a></li>
+      <li><a href="/apex/vfOrderList">Orders</a></li>
+    </ul>
+  </nav>
+
+  <article>
+
+    <apex:detail subject="{!case}" relatedList="false" title="false"/>
+  </article>
+</section>
+
+<footer>
+  <p>KoozieGroup</p>
+</footer>     
+</apex:page>

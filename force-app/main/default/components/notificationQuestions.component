@@ -1,0 +1,13 @@
+<apex:component controller="findCQs" access="global">
+    <apex:attribute id="caseIdR" assignTo="{!caseId}" name="rCaseID" type="Case" description="The case's SF ID"/>
+
+    <apex:variable value="{!1}" var="rowNum"/>    
+
+    <apex:repeat value="{!NQc}" var="Questions">  
+        Product Number:&nbsp;&nbsp;<apex:outputText value="{!Questions.Product_Number__c}"/>)&nbsp;&nbsp;<br/>         
+        Line Number:&nbsp;&nbsp;<apex:outputText value="{!Questions.Line_Number__c}"/>)&nbsp;&nbsp;  
+        <apex:outputText value="{!Questions.Message_Text__c}"/> <br/><br/> 
+        <apex:variable var="rowNum" value="{!rowNum + 1}"/>
+    </apex:repeat>
+    
+</apex:component>

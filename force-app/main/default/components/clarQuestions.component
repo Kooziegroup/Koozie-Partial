@@ -1,0 +1,22 @@
+<apex:component controller="findCQs" access="global">
+    <apex:attribute id="caseIdR" assignTo="{!caseId}" name="rCaseID" type="Case" description="The case's SF ID"/>
+
+    <apex:variable value="{!1}" var="rowNum"/>    
+<!--     For your convenience you may approve your proof(s) on-line by clicking the link below.<br/><br/>-->
+    <apex:repeat value="{!CQ}" var="Questions">         
+        <!-- <apex:outputText value="{!FLOOR(rowNum)}"/>)&nbsp;&nbsp; -->
+        <apex:outputText value="{!Questions.Line_Number__c}"/>)&nbsp;&nbsp;  
+        <apex:outputText value="{!Questions.Message_Text__c}"/> <br/>
+        <apex:variable var="rowNum" value="{!rowNum + 1}"/>
+    </apex:repeat><br/><br/>
+    
+    <apex:variable value="{!1}" var="rowNum"/>
+    <apex:repeat value="{!CQ}" var="Questions">         
+        <!-- Line Number:&nbsp;<apex:outputText value="{!FLOOR(rowNum)}"/>)&nbsp;&nbsp;&nbsp;&nbsp; -->
+        Line Number:&nbsp;<apex:outputText value="{!Questions.Line_Number__c}"/>)&nbsp;&nbsp;&nbsp;&nbsp;
+        Product Number:&nbsp; <apex:outputText value="{!Questions.Product_Number__c}"/> <br/>   
+        Proof On-Line:&nbsp; <apex:outputText value="{!Questions.Online_Proof_URL__c}" escape="false"/><br/><br/>
+        <apex:variable var="rowNum" value="{!rowNum + 1}"/>
+    </apex:repeat>
+    
+</apex:component>

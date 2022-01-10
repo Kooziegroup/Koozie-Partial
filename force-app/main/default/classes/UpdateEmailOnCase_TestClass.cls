@@ -1,0 +1,261 @@
+@isTest
+public class UpdateEmailOnCase_TestClass {
+       @isTest
+       public static void emailupdate() {
+        Account acc = new Account();
+        acc.Name = 'test';
+        acc.Customer_Account_Number__c = '12345';
+        acc.Customer_Category__c = 'Hotel';
+        
+        
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        insert acc;
+        
+        Account_Clarification_Team__c act = new Account_Clarification_Team__c();
+        act.Name = 'Elite 801 Proforma';
+        act.From_Email__c = 'cshotel@kooziegroup.com';
+        act.EBS_Num__c = '12345';
+        act.Customer_Category__c = 'Hotel';
+        insert act;
+        
+        
+        Case css = new Case();
+        /* css.AccountId = acc.Id;
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
+        css.Case_Reason_Type__c = 'Email';
+        css.Customer_To_Email__c = act.From_Email__c; */
+        css.EBS_Account_Number__c ='12345';
+        css.Status = 'New';
+        css.Origin = 'ASI Rating';
+        insert css;
+    }
+
+       @isTest
+       public static void emailupdate1() {
+        Account acc = new Account();
+        acc.Name = 'test';
+        acc.Customer_Account_Number__c = '12345';
+        acc.Logo__c = 'Calendar Coop';
+        
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        insert acc; 
+        
+        Account_Clarification_Team__c act = new Account_Clarification_Team__c();
+        act.Name = 'Elite 804 Facilis Brand Addition';
+        act.From_Email__c = 'csinfo@calndercs.com';
+        act.EBS_Num__c = '12345';
+        act.Logo__c = 'Calendar Coop';
+        insert act;
+        
+        
+        Case css = new Case();
+        /* css.AccountId = acc.Id;
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
+        css.Customer_To_Email__c = act.From_Email__c;
+        css.Case_Reason_Type__c = 'Email'; */
+        css.EBS_Account_Number__c ='12345';
+        css.Status = 'New';
+        css.Origin = 'ASI Rating';
+        insert css;
+    }
+
+    @isTest
+    public static void emailupdate2() {
+        Account acc = new Account();
+        acc.Name = 'test';
+        acc.Customer_Account_Number__c = '33381';
+        
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        insert acc;
+        
+        Account_Clarification_Team__c act = new Account_Clarification_Team__c();
+        act.Name = 'Elite 801 Proforma';
+        act.From_Email__c = 'proformabcsteam@kooziegroup.com';
+        act.EBS_Num__c = '33381';
+        insert act;
+        
+        
+        Case css = new Case();
+        /* css.AccountId = acc.Id;
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
+        css.Customer_To_Email__c = act.From_Email__c;
+        css.Case_Reason_Type__c = 'Email'; */
+        css.EBS_Account_Number__c = '33381';
+        css.Status = 'New';
+        css.Origin = 'ASI Rating';
+        insert css;
+    }
+
+    @isTest
+    public static void emailupdate3() {
+        Account acc = new Account();
+        acc.Name = 'test';
+        acc.Customer_Account_Number__c = '12345';
+        acc.Customer_Category__c = 'Bookstore';
+        
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        insert acc;
+        
+        Account_Clarification_Team__c act = new Account_Clarification_Team__c();
+        act.Name = 'Elite 801 Proforma';
+        act.EBS_Num__c = '12345';
+        act.From_Email__c = 'anchorwallace@anchorwallace.com';
+        act.Customer_Category__c = 'Bookstore';
+        insert act;
+        
+        
+        Case css = new Case();
+        /* css.AccountId = acc.Id;
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
+        css.Customer_To_Email__c = act.From_Email__c;
+        css.Case_Reason_Type__c = 'Email' */
+        css.EBS_Account_Number__c = '12345';
+        css.Status = 'New';
+        css.Origin = 'ASI Rating';
+        insert css;
+    }
+
+    @isTest
+    public static void emailupdate4() {
+        Account acc = new Account();
+        acc.Name = 'test';
+        acc.Customer_Account_Number__c = '12345';
+        acc.Routing_Override__c = 'Calendar Dedicated';
+        
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        insert acc;
+        
+        Account_Clarification_Team__c act = new Account_Clarification_Team__c();
+        act.Name = 'Elite 801 Proforma';
+        act.EBS_Num__c = '12345';
+        act.From_Email__c = 'coopspecialtyteam@kooziegroup.com';
+        act.Account_Queue__c = 'Calendar Dedicated';
+        insert act;
+        
+        
+        Case css = new Case();
+        /* css.AccountId = acc.Id;
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
+        css.Customer_To_Email__c = act.From_Email__c;
+        css.Case_Reason_Type__c = 'Email'; */
+        css.EBS_Account_Number__c ='12345';
+        css.Status = 'New';
+        css.Origin = 'ASI Rating';
+        insert css;
+    }
+
+    @isTest
+    public static void emailupdate5() {
+        Account acc = new Account();
+        acc.Name = 'test';
+        acc.Customer_Account_Number__c = '12345';
+        
+        
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        insert acc;
+        
+        Account_Clarification_Team__c act = new Account_Clarification_Team__c();
+        act.Name = 'Elite 801 Proforma';
+        act.From_Email__c = 'test@test.com';
+        act.EBS_Num__c = '12345';
+        insert act;
+        
+        
+        Case css = new Case();
+        /* css.AccountId = acc.Id;
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
+        css.Customer_To_Email__c = act.From_Email__c;
+        css.Case_Reason_Type__c = 'Email'; */
+        css.EBS_Account_Number__c ='12345';
+        css.Status = 'New';
+        css.Origin = 'ASI Rating';
+        insert css;
+    }
+    @isTest
+    public static void emailupdate6() {
+        Account acc = new Account();
+        acc.Name = 'Test';
+        acc.Customer_Account_Number__c = ' ';
+        insert acc;
+
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+       
+        Account_Clarification_Team__c act = new Account_Clarification_Team__c();
+        act.Name = 'HG Custom';
+        act.From_Email__c = 'customerservice@kooziegroup.com';
+        act.EBS_Num__c = '';
+        insert act;
+        
+        
+        Case css = new Case();
+        /* css.AccountId = acc.Id;
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
+        css.Customer_To_Email__c = act.From_Email__c;
+        css.Case_Reason_Type__c = 'Email'; */
+        css.EBS_Account_Number__c = ' ';
+        css.Status = 'New';
+        css.Origin = 'ASI Rating';
+        insert css;
+    }
+    @isTest
+       public static void emailupdate7() {
+        Account acc = new Account();
+        acc.Name = 'test';
+        acc.Customer_Account_Number__c = '12345';
+        acc.Customer_Category__c = 'Church';
+        
+        
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        insert acc;
+        
+        Account_Clarification_Team__c act = new Account_Clarification_Team__c();
+        act.Name = 'Elite 801 Proforma';
+        act.From_Email__c = 'cshotel@kooziegroup.com';
+        act.EBS_Num__c = '12345';
+        act.Customer_Category__c = 'Church';
+        insert act;
+        
+        
+        Case css = new Case();
+        /* css.AccountId = acc.Id;
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
+        css.Case_Reason_Type__c = 'Email';
+        css.Customer_To_Email__c = act.From_Email__c; */
+        css.EBS_Account_Number__c ='12345';
+        css.Status = 'New';
+        css.Origin = 'ASI Rating';
+        insert css;
+    }
+    @isTest
+       public static void emailupdate8() {
+        Account acc = new Account();
+        acc.Name = 'test';
+        acc.Customer_Account_Number__c = '12345';
+        acc.Customer_Category__c = 'Casino';
+        
+        
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        insert acc;
+        
+        Account_Clarification_Team__c act = new Account_Clarification_Team__c();
+        act.Name = 'Elite 801 Proforma';
+        act.From_Email__c = 'cshotel@kooziegroup.com';
+        act.EBS_Num__c = '12345';
+        act.Customer_Category__c = 'Casino';
+        insert act;
+        
+        
+        Case css = new Case();
+        /* css.AccountId = acc.Id;
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
+        css.Case_Reason_Type__c = 'Email';
+        css.Customer_To_Email__c = act.From_Email__c; */
+        css.EBS_Account_Number__c ='12345';
+        css.Status = 'New';
+        css.Origin = 'ASI Rating';
+        insert css;
+    }
+}
