@@ -87,7 +87,7 @@ public class CaseTriggerUtility {
                    
                     Account ac = [Select Id, Routing_Override__c, EBS_Num__c, Customer_Category__c, Logo__c, Customer_Account_Number__c,
                     EBS_Parent_ID__c, Parent_EBS__c, ParentId, Parent.ParentId, Parent.Logo__c, Parent.Routing_Override__c, Parent.EBS_Num__c,
-                    Parent.Customer_Category__c, Parent.Customer_Account_Number__c FROM Account WHERE EBS_Parent_ID__c =:ebsp];
+                    Parent.Customer_Category__c, Parent.Customer_Account_Number__c FROM Account WHERE EBS_Parent_ID__c =:ebsp LIMIT 1];
                     System.debug('======= ' +ac);
                     System.debug('======= ' +ac.Parent);
                     System.debug('======= ' +ac.Parent.Logo__c);
@@ -145,10 +145,12 @@ public class CaseTriggerUtility {
 
                     else if(ac.Parent.Customer_Account_Number__c != null){
                         Account_Clarification_Team__c actt = mapOfEbsVsACT.get(ac.Parent.Customer_Account_Number__c);
-                        ca.Customer_To_Email__c = actt.From_Email__c;
-                        ca.Proof_Team_Link__c = actt.Id;
-                        ca.Clarification_Team_Link__c = actt.Id;
-                        System.debug('============== '+ca.Customer_To_Email__c);
+                        if(actt != null){
+                            ca.Customer_To_Email__c = actt.From_Email__c;
+                            ca.Proof_Team_Link__c = actt.Id;
+                            ca.Clarification_Team_Link__c = actt.Id;
+                            System.debug('============== '+ca.Customer_To_Email__c);
+                        } 
                     }
 
                     else{
