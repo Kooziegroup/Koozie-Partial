@@ -38,6 +38,7 @@ public class CaseTriggerUtility {
         Map<String,Account> mapofEbsVsAccount = new Map<String,Account>();
         //Set<String>accqueue = new Set<String>();
         Map<String, String>mapOfAcoountEbsVsParentEbs = new  Map<String, String>();
+        Id recordType = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         Id ebs = Label.X33381_id;
         Id coop = Label.Calendar_Coop;
         Id calendar = Label.Calendar_Dedicated;
@@ -48,7 +49,7 @@ public class CaseTriggerUtility {
         Id defau = Label.Default;
 
         for(Case cs:caseList){
-            if(cs.EBS_Account_Number__c != null){
+            if(cs.EBS_Account_Number__c != null && cs.RecordTypeId == recordType){
                 mapOfIdVsEbsAccountNumber.put(cs.Id, cs.EBS_Account_Number__c); 
             } 
         }

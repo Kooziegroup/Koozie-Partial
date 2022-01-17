@@ -25,6 +25,7 @@ public class UpdateEmailOnCase_TestClass {
            css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
            css.Case_Reason_Type__c = 'Email';
            css.Customer_To_Email__c = act.From_Email__c; */
+           css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
            css.EBS_Account_Number__c ='12345';
            css.Status = 'New';
            css.Origin = 'ASI Rating';
@@ -54,6 +55,7 @@ public class UpdateEmailOnCase_TestClass {
            css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
            css.Customer_To_Email__c = act.From_Email__c;
            css.Case_Reason_Type__c = 'Email'; */
+           css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
            css.EBS_Account_Number__c ='12345';
            css.Status = 'New';
            css.Origin = 'ASI Rating';
@@ -81,10 +83,11 @@ public class UpdateEmailOnCase_TestClass {
        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
        css.Customer_To_Email__c = act.From_Email__c;
        css.Case_Reason_Type__c = 'Email'; */
-        css.EBS_Account_Number__c = '33381';
-        css.Status = 'New';
-        css.Origin = 'ASI Rating';
-        insert css;
+       css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
+       css.EBS_Account_Number__c = '33381';
+       css.Status = 'New';
+       css.Origin = 'ASI Rating';
+       insert css;
     }
 
     @isTest
@@ -110,6 +113,7 @@ public class UpdateEmailOnCase_TestClass {
         css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.Customer_To_Email__c = act.From_Email__c;
         css.Case_Reason_Type__c = 'Email' */
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.EBS_Account_Number__c = '12345';
         css.Status = 'New';
         css.Origin = 'ASI Rating';
@@ -139,6 +143,7 @@ public class UpdateEmailOnCase_TestClass {
         css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.Customer_To_Email__c = act.From_Email__c;
         css.Case_Reason_Type__c = 'Email'; */
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.EBS_Account_Number__c ='12345';
         css.Status = 'New';
         css.Origin = 'ASI Rating';
@@ -167,6 +172,7 @@ public class UpdateEmailOnCase_TestClass {
         css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.Customer_To_Email__c = act.From_Email__c;
         css.Case_Reason_Type__c = 'Email'; */
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.EBS_Account_Number__c ='12345';
         css.Status = 'New';
         css.Origin = 'ASI Rating';
@@ -193,6 +199,7 @@ public class UpdateEmailOnCase_TestClass {
         css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.Customer_To_Email__c = act.From_Email__c;
         css.Case_Reason_Type__c = 'Email'; */
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.EBS_Account_Number__c = '12345';
         css.Status = 'New';
         css.Origin = 'ASI Rating';
@@ -223,6 +230,7 @@ public class UpdateEmailOnCase_TestClass {
            css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
            css.Case_Reason_Type__c = 'Email';
            css.Customer_To_Email__c = act.From_Email__c; */
+           css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
            css.EBS_Account_Number__c ='12345';
            css.Status = 'New';
            css.Origin = 'ASI Rating';
@@ -253,6 +261,7 @@ public class UpdateEmailOnCase_TestClass {
            css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
            css.Case_Reason_Type__c = 'Email';
            css.Customer_To_Email__c = act.From_Email__c; */
+           css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
            css.EBS_Account_Number__c ='12345';
            css.Status = 'New';
            css.Origin = 'ASI Rating';
@@ -293,6 +302,7 @@ public class UpdateEmailOnCase_TestClass {
            css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
            css.Case_Reason_Type__c = 'Email';
            css.Customer_To_Email__c = act.From_Email__c; */
+           css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
            css.EBS_Account_Number__c ='12345';
            css.Status = 'New';
            css.Origin = 'ASI Rating';
@@ -333,6 +343,7 @@ public class UpdateEmailOnCase_TestClass {
            css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
            css.Case_Reason_Type__c = 'Email';
            css.Customer_To_Email__c = act.From_Email__c; */
+           css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
            css.EBS_Account_Number__c ='12345';
            css.Status = 'New';
            css.Origin = 'ASI Rating';
@@ -373,6 +384,7 @@ public class UpdateEmailOnCase_TestClass {
            css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
            css.Case_Reason_Type__c = 'Email';
            css.Customer_To_Email__c = act.From_Email__c; */
+           css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
            css.EBS_Account_Number__c ='12345';
            css.Status = 'New';
            css.Origin = 'ASI Rating';
@@ -413,6 +425,7 @@ public class UpdateEmailOnCase_TestClass {
            css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
            css.Case_Reason_Type__c = 'Email';
            css.Customer_To_Email__c = act.From_Email__c; */
+           css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
            css.EBS_Account_Number__c ='12345';
            css.Status = 'New';
            css.Origin = 'ASI Rating';
@@ -453,6 +466,7 @@ public class UpdateEmailOnCase_TestClass {
         css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
         css.Case_Reason_Type__c = 'Email';
         css.Customer_To_Email__c = act.From_Email__c; */
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.EBS_Account_Number__c ='12345';
         css.Status = 'New';
         css.Origin = 'ASI Rating';
@@ -493,6 +507,7 @@ public class UpdateEmailOnCase_TestClass {
         css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
         css.Case_Reason_Type__c = 'Email';
         css.Customer_To_Email__c = act.From_Email__c; */
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.EBS_Account_Number__c ='12345';
         css.Status = 'New';
         css.Origin = 'ASI Rating';
@@ -531,6 +546,7 @@ public class UpdateEmailOnCase_TestClass {
         css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
         css.Case_Reason_Type__c = 'Email';
         css.Customer_To_Email__c = act.From_Email__c; */
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.EBS_Account_Number__c ='12345';
         css.Status = 'New';
         css.Origin = 'ASI Rating';
@@ -569,6 +585,7 @@ public class UpdateEmailOnCase_TestClass {
         css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
         css.Case_Reason_Type__c = 'Email';
         css.Customer_To_Email__c = act.From_Email__c; */
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.EBS_Account_Number__c ='12345';
         css.Status = 'New';
         css.Origin = 'ASI Rating';
