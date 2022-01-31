@@ -510,7 +510,7 @@ public class UpdateEmailOnCase_TestClass {
         css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
         css.EBS_Account_Number__c ='12345';
         css.Status = 'New';
-        css.Origin = 'ASI Rating';
+        css.Origin = 'Email';
         insert css;
     }
     
@@ -586,6 +586,44 @@ public class UpdateEmailOnCase_TestClass {
         css.Case_Reason_Type__c = 'Email';
         css.Customer_To_Email__c = act.From_Email__c; */
         css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Clarification').getRecordTypeId();
+        css.EBS_Account_Number__c ='12345';
+        css.Status = 'New';
+        css.Origin = 'ASI Rating';
+        insert css;
+    }
+    @isTest
+    public static void parentAccountCustomerAccountNumberEqualsActEbsNumberWhenRecordTypeIsDelayedOrder() {
+
+         Account parentRecord = new Account();
+         parentRecord.Name = 'test';
+         parentRecord.Customer_Account_Number__c = '54321';
+         insert parentRecord;
+
+        Account childRecord = new Account();
+        childRecord.Name = 'test';
+        childRecord.Customer_Account_Number__c = '12345';
+        childRecord.EBS_Parent_ID__c = '54321';
+        childRecord.ParentId = parentRecord.Id;
+        insert childRecord;
+        
+
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        //acc.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+        
+        
+        Account_Clarification_Team__c act = new Account_Clarification_Team__c();
+        act.Name = 'Elite 801 Proforma';
+        act.From_Email__c = 'cshotel@kooziegroup.com';
+        act.EBS_Num__c = '54321';
+        insert act;
+        
+        
+        Case css = new Case();
+        /* css.AccountId = acc.Id;
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Case').getRecordTypeId();
+        css.Case_Reason_Type__c = 'Email';
+        css.Customer_To_Email__c = act.From_Email__c; */
+        css.RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Delayed Order').getRecordTypeId();
         css.EBS_Account_Number__c ='12345';
         css.Status = 'New';
         css.Origin = 'ASI Rating';
